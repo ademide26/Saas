@@ -367,6 +367,7 @@ export default {
   font-weight: 600;
   font-size: 16px;
   line-height: 150%;
+  transition: color 0.2s ease;
   color: #7823B9;
 }
 
@@ -381,6 +382,7 @@ export default {
   border: 1px solid #7823B9;
   border-radius: 8px;
   height: 50px;
+  transition: color 0.2s ease;
 }
 
 .hero-btn-box {
@@ -464,6 +466,7 @@ color: #FFFFFF;
   border-radius: 8px;
   border: #7823B9;
   height: 50px;
+  transition: color 0.2s ease;
 }
 
 .login {
@@ -497,6 +500,7 @@ gap: 24px;
   font-size: 16px;
   line-height: 150%;
   color: #201A2D;
+  transition: color 0.2s ease;
 }
 
 .nav-sect {
