@@ -11,4 +11,8 @@ export default {
   </main>
 </template>
 
-<style scoped></style>
+<style>
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+</style>
