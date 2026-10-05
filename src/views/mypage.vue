@@ -210,55 +210,59 @@
         <div class="detail-hero-subtext">Brace yourself for an extraordinary journey into the future of technology.</div>
       </div>
       <div class="details-main-frame">
-        <div class="details-left-frame">
-          <div class="upper-dts-frame">
-            <div class="dt-icon">
-              <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M17.6472 9.80405H13.7256C11.5598 9.80405 9.804 11.5598 9.804 13.7256V37.2552C9.804 39.4211 11.5598 41.1768 13.7256 41.1768H33.3336C35.4994 41.1768 37.2552 39.4211 37.2552 37.2552V13.7256C37.2552 11.5598 35.4994 9.80405 33.3336 9.80405H29.412M17.6472 9.80405C17.6472 11.9699 19.403 13.7256 21.5688 13.7256H25.4904C27.6562 13.7256 29.412 11.9699 29.412 9.80405M17.6472 9.80405C17.6472 7.63821 19.403 5.88245 21.5688 5.88245H25.4904C27.6562 5.88245 29.412 7.63821 29.412 9.80405M23.5296 23.5296H29.412M23.5296 31.3728H29.412M17.6472 23.5296H17.6668M17.6472 31.3728H17.6668" stroke="#111827" stroke-width="3.9216" stroke-linecap="round"/>
-              </svg>
+        <div class="details-column">
+          <div class="details-left-frame">
+            <div class="upper-dts-frame">
+              <div class="dt-icon">
+                <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M17.6472 9.80405H13.7256C11.5598 9.80405 9.804 11.5598 9.804 13.7256V37.2552C9.804 39.4211 11.5598 41.1768 13.7256 41.1768H33.3336C35.4994 41.1768 37.2552 39.4211 37.2552 37.2552V13.7256C37.2552 11.5598 35.4994 9.80405 33.3336 9.80405H29.412M17.6472 9.80405C17.6472 11.9699 19.403 13.7256 21.5688 13.7256H25.4904C27.6562 13.7256 29.412 11.9699 29.412 9.80405M17.6472 9.80405C17.6472 7.63821 19.403 5.88245 21.5688 5.88245H25.4904C27.6562 5.88245 29.412 7.63821 29.412 9.80405M23.5296 23.5296H29.412M23.5296 31.3728H29.412M17.6472 23.5296H17.6668M17.6472 31.3728H17.6668" stroke="#111827" stroke-width="3.9216" stroke-linecap="round"/>
+                </svg>
+              </div>
+              <div class="dt-subtext">Task Based</div>
             </div>
-            <div class="dt-subtext">Task Based</div>
+            <div class="dt-texts">Nullam tincidunt, purus sit amet viverra auctor, quam neque dapibus dui</div>
           </div>
-          <div class="dt-texts">Nullam tincidunt, purus sit amet viverra auctor, quam neque dapibus dui</div>
-        </div>
 
-        <div class="details-left-frame">
-          <div class="upper-dts-frame">
-            <div class="dt-icon">
-              <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M7.8432 13.7256V33.3336C7.8432 37.6653 14.8662 41.1768 23.5296 41.1768C32.193 41.1768 39.216 37.6653 39.216 33.3336V13.7256M7.8432 13.7256C7.8432 18.0573 14.8662 21.5688 23.5296 21.5688C32.193 21.5688 39.216 18.0573 39.216 13.7256M7.8432 13.7256C7.8432 9.39397 14.8662 5.88245 23.5296 5.88245C32.193 5.88245 39.216 9.39397 39.216 13.7256M39.216 23.5296C39.216 27.8613 32.193 31.3728 23.5296 31.3728C14.8662 31.3728 7.8432 27.8613 7.8432 23.5296" stroke="#111827" stroke-width="3.9216"/>
-              </svg>
+          <div class="details-left-frame">
+            <div class="upper-dts-frame">
+              <div class="dt-icon">
+                <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M7.8432 13.7256V33.3336C7.8432 37.6653 14.8662 41.1768 23.5296 41.1768C32.193 41.1768 39.216 37.6653 39.216 33.3336V13.7256M7.8432 13.7256C7.8432 18.0573 14.8662 21.5688 23.5296 21.5688C32.193 21.5688 39.216 18.0573 39.216 13.7256M7.8432 13.7256C7.8432 9.39397 14.8662 5.88245 23.5296 5.88245C32.193 5.88245 39.216 9.39397 39.216 13.7256M39.216 23.5296C39.216 27.8613 32.193 31.3728 23.5296 31.3728C14.8662 31.3728 7.8432 27.8613 7.8432 23.5296" stroke="#111827" stroke-width="3.9216"/>
+                </svg>
+              </div>
+              <div class="dt-subtext">Data Based Center</div>
             </div>
-            <div class="dt-subtext">Data Based Center</div>
+            <div class="dt-texts">Nullam tincidunt, purus sit amet viverra auctor, quam neque dapibus dui</div>
           </div>
-          <div class="dt-texts">Nullam tincidunt, purus sit amet viverra auctor, quam neque dapibus dui</div>
         </div>
 
-        <div class="dts-center=-frame">
-          <img src="/Images/pluck app mobile.png" />
+        <div class="dts-center-frame">
+          <img src="/Images/pluck app mobile.png" alt="Pluck mobile app preview" />
         </div>
 
-        <div class="details-left-frame">
-          <div class="upper-dts-frame">
-            <div class="dt-icon">
-              <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M15.6864 13.7256V5.88245M31.3728 13.7256V5.88245M13.7256 21.5688H33.3336M9.80399 41.1768H37.2552C39.421 41.1768 41.1768 39.4211 41.1768 37.2552V13.7256C41.1768 11.5598 39.421 9.80405 37.2552 9.80405H9.80399C7.63815 9.80405 5.88239 11.5598 5.88239 13.7256V37.2552C5.88239 39.4211 7.63815 41.1768 9.80399 41.1768Z" stroke="#111827" stroke-width="3.9216" stroke-linecap="round" stroke-linejoin="round"/>
-              </svg>
+        <div class="details-column">
+          <div class="details-left-frame">
+            <div class="upper-dts-frame">
+              <div class="dt-icon">
+                <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M15.6864 13.7256V5.88245M31.3728 13.7256V5.88245M13.7256 21.5688H33.3336M9.80399 41.1768H37.2552C39.421 41.1768 41.1768 39.4211 41.1768 37.2552V13.7256C41.1768 11.5598 39.421 9.80405 37.2552 9.80405H9.80399C7.63815 9.80405 5.88239 11.5598 5.88239 13.7256V37.2552C5.88239 39.4211 7.63815 41.1768 9.80399 41.1768Z" stroke="#111827" stroke-width="3.9216" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </div>
+              <div class="dt-subtext">Always Latest</div>
             </div>
-            <div class="dt-subtext">Always Latest</div>
+            <div class="dt-texts">Nullam tincidunt, purus sit amet viverra auctor, quam neque dapibus dui</div>
           </div>
-          <div class="dt-texts">Nullam tincidunt, purus sit amet viverra auctor, quam neque dapibus dui</div>
-        </div>
 
-        <div class="details-left-frame">
-          <div class="upper-dts-frame">
-            <div class="dt-icon">
-              <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M17.6472 5.88245V9.80405M29.412 5.88245V9.80405M17.6472 37.2552V41.1768M29.412 37.2552V41.1768M9.80399 17.6472H5.88239M9.80399 29.412H5.88239M41.1768 17.6472H37.2552M41.1768 29.412H37.2552M13.7256 37.2552H33.3336C35.4994 37.2552 37.2552 35.4995 37.2552 33.3336V13.7256C37.2552 11.5598 35.4994 9.80405 33.3336 9.80405H13.7256C11.5597 9.80405 9.80399 11.5598 9.80399 13.7256V33.3336C9.80399 35.4995 11.5597 37.2552 13.7256 37.2552ZM17.6472 17.6472H29.412V29.412H17.6472V17.6472Z" stroke="#111827" stroke-width="3.9216" stroke-linecap="round" stroke-linejoin="round"/>
-              </svg>            </div>
-            <div class="dt-subtext">Precise Logics</div>
+          <div class="details-left-frame">
+            <div class="upper-dts-frame">
+              <div class="dt-icon">
+                <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M17.6472 5.88245V9.80405M29.412 5.88245V9.80405M17.6472 37.2552V41.1768M29.412 37.2552V41.1768M9.80399 17.6472H5.88239M9.80399 29.412H5.88239M41.1768 17.6472H37.2552M41.1768 29.412H37.2552M13.7256 37.2552H33.3336C35.4994 37.2552 37.2552 35.4995 37.2552 33.3336V13.7256C37.2552 11.5598 35.4994 9.80405 33.3336 9.80405H13.7256C11.5597 9.80405 9.80399 11.5598 9.80399 13.7256V33.3336C9.80399 35.4995 11.5597 37.2552 13.7256 37.2552ZM17.6472 17.6472H29.412V29.412H17.6472V17.6472Z" stroke="#111827" stroke-width="3.9216" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>            </div>
+              <div class="dt-subtext">Precise Logics</div>
+            </div>
+            <div class="dt-texts">Nullam tincidunt, purus sit amet viverra auctor, quam neque dapibus dui</div>
           </div>
-          <div class="dt-texts">Nullam tincidunt, purus sit amet viverra auctor, quam neque dapibus dui</div>
         </div>
       </div>
 
@@ -271,6 +275,31 @@
 
 
 <style scoped>
+.dts-center-frame {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+.dts-center-frame img {
+  width: 100%;
+  max-width: 380px;
+  height: auto;
+}
+.details-left-frame--mirror {
+  align-items: flex-start;
+}
+.details-left-frame--mirror .upper-dts-frame {
+  align-items: flex-start;
+}
+.details-left-frame--mirror .dt-icon {
+  margin-left: 0;
+  margin-right: auto;
+}
+.details-left-frame--mirror .dt-subtext,
+.details-left-frame--mirror .dt-texts {
+  text-align: left;
+}
 .dt-texts {
   font-family: 'Inter';
   font-style: normal;
@@ -305,7 +334,7 @@
 }
 .details-left-frame {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: space-between;
   align-items: flex-end;
   padding: 0px;
@@ -313,10 +342,14 @@
 }
 .details-main-frame {
   display: flex;
-  flex-direction: row;
   align-items: center;
-  padding: 0px;
+  justify-content: center;
   gap: 167px;
+}
+.details-column {
+  display: flex;
+  flex-direction: column;
+  gap: 80px; /* match the actual vertical spacing from Figma */
 }
 .detail-hero-subtext {
   font-family: 'Inter';
