@@ -205,7 +205,63 @@
     </section>
 
     <section class="details-sect">
-      <div class="detail-hero-frame"></div>
+      <div class="detail-hero-frame">
+        <div class="detail-hero-text"> Get in detail on how we do it</div>
+        <div class="detail-hero-subtext">Brace yourself for an extraordinary journey into the future of technology.</div>
+      </div>
+      <div class="details-main-frame">
+        <div class="details-left-frame">
+          <div class="upper-dts-frame">
+            <div class="dt-icon">
+              <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M17.6472 9.80405H13.7256C11.5598 9.80405 9.804 11.5598 9.804 13.7256V37.2552C9.804 39.4211 11.5598 41.1768 13.7256 41.1768H33.3336C35.4994 41.1768 37.2552 39.4211 37.2552 37.2552V13.7256C37.2552 11.5598 35.4994 9.80405 33.3336 9.80405H29.412M17.6472 9.80405C17.6472 11.9699 19.403 13.7256 21.5688 13.7256H25.4904C27.6562 13.7256 29.412 11.9699 29.412 9.80405M17.6472 9.80405C17.6472 7.63821 19.403 5.88245 21.5688 5.88245H25.4904C27.6562 5.88245 29.412 7.63821 29.412 9.80405M23.5296 23.5296H29.412M23.5296 31.3728H29.412M17.6472 23.5296H17.6668M17.6472 31.3728H17.6668" stroke="#111827" stroke-width="3.9216" stroke-linecap="round"/>
+              </svg>
+            </div>
+            <div class="dt-subtext">Task Based</div>
+          </div>
+          <div class="dt-texts">Nullam tincidunt, purus sit amet viverra auctor, quam neque dapibus dui</div>
+        </div>
+
+        <div class="details-left-frame">
+          <div class="upper-dts-frame">
+            <div class="dt-icon">
+              <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M7.8432 13.7256V33.3336C7.8432 37.6653 14.8662 41.1768 23.5296 41.1768C32.193 41.1768 39.216 37.6653 39.216 33.3336V13.7256M7.8432 13.7256C7.8432 18.0573 14.8662 21.5688 23.5296 21.5688C32.193 21.5688 39.216 18.0573 39.216 13.7256M7.8432 13.7256C7.8432 9.39397 14.8662 5.88245 23.5296 5.88245C32.193 5.88245 39.216 9.39397 39.216 13.7256M39.216 23.5296C39.216 27.8613 32.193 31.3728 23.5296 31.3728C14.8662 31.3728 7.8432 27.8613 7.8432 23.5296" stroke="#111827" stroke-width="3.9216"/>
+              </svg>
+            </div>
+            <div class="dt-subtext">Data Based Center</div>
+          </div>
+          <div class="dt-texts">Nullam tincidunt, purus sit amet viverra auctor, quam neque dapibus dui</div>
+        </div>
+
+        <div class="dts-center=-frame">
+          <img src="/Images/pluck app mobile.png" />
+        </div>
+
+        <div class="details-left-frame">
+          <div class="upper-dts-frame">
+            <div class="dt-icon">
+              <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M15.6864 13.7256V5.88245M31.3728 13.7256V5.88245M13.7256 21.5688H33.3336M9.80399 41.1768H37.2552C39.421 41.1768 41.1768 39.4211 41.1768 37.2552V13.7256C41.1768 11.5598 39.421 9.80405 37.2552 9.80405H9.80399C7.63815 9.80405 5.88239 11.5598 5.88239 13.7256V37.2552C5.88239 39.4211 7.63815 41.1768 9.80399 41.1768Z" stroke="#111827" stroke-width="3.9216" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </div>
+            <div class="dt-subtext">Always Latest</div>
+          </div>
+          <div class="dt-texts">Nullam tincidunt, purus sit amet viverra auctor, quam neque dapibus dui</div>
+        </div>
+
+        <div class="details-left-frame">
+          <div class="upper-dts-frame">
+            <div class="dt-icon">
+              <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M17.6472 5.88245V9.80405M29.412 5.88245V9.80405M17.6472 37.2552V41.1768M29.412 37.2552V41.1768M9.80399 17.6472H5.88239M9.80399 29.412H5.88239M41.1768 17.6472H37.2552M41.1768 29.412H37.2552M13.7256 37.2552H33.3336C35.4994 37.2552 37.2552 35.4995 37.2552 33.3336V13.7256C37.2552 11.5598 35.4994 9.80405 33.3336 9.80405H13.7256C11.5597 9.80405 9.80399 11.5598 9.80399 13.7256V33.3336C9.80399 35.4995 11.5597 37.2552 13.7256 37.2552ZM17.6472 17.6472H29.412V29.412H17.6472V17.6472Z" stroke="#111827" stroke-width="3.9216" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>            </div>
+            <div class="dt-subtext">Precise Logics</div>
+          </div>
+          <div class="dt-texts">Nullam tincidunt, purus sit amet viverra auctor, quam neque dapibus dui</div>
+        </div>
+      </div>
+
     </section>
     <section class="review-sect"></section>
     <section class="subs-sect"></section>
@@ -215,6 +271,79 @@
 
 
 <style scoped>
+.dt-texts {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 30px;
+  text-align: right;
+  color: rgba(31, 31, 57, 0.5);
+}
+.dt-subtext {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 28px;
+  text-align: right;
+  color: #1F1F39;
+}
+.dt-icon {
+  display: flex;
+  margin-left: auto;
+  align-items: center;
+}
+.upper-dts-frame {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  padding: 0px;
+  gap: 20px;
+  margin: 0 auto;
+  min-height: 235.06px;
+}
+.details-left-frame {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-end;
+  padding: 0px;
+  gap: 24px;
+}
+.details-main-frame {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 0px;
+  gap: 167px;
+}
+.detail-hero-subtext {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 28px;
+  line-height: 48px;
+  text-align: center;
+  color: rgba(31, 31, 57, 0.5);
+}
+.detail-hero-text {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 70px;
+  line-height: 80px;
+  text-align: center;
+  color: #1F1F39;
+}
+.detail-hero-frame {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  align-self: stretch;
+  padding: 0px;
+  gap: 25px;
+}
 .details-sect {
   display: flex;
   flex-direction: column;
