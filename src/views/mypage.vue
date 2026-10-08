@@ -1,3 +1,21 @@
+<script>
+export default {
+  name: 'MyPage',
+  data() {
+    return {
+      currentIndex: 0,
+      totalBox: 3,
+      email: ''
+    }
+  },
+methods:  {
+  handleSubscribe() {
+    console.log('Subscribing:', this.email)
+  }
+}
+};
+</script>
+
 <template>
   <section class="whole-page">
     <section class="main-sect">
@@ -213,6 +231,7 @@
       </div>
 
     </section>
+
     <section class="testimonials-sect">
       <div class="detail-hero-frame">
         <div class="detail-hero-text">What our client say</div>
@@ -224,15 +243,358 @@
           <h3 class="client-name">Michelle Muara</h3>
           <p class="review">Integration with PLUCK has transformed our app. Exceptional support and remarkable results. Highly recommended!</p>
         </div>
+
+        <div class="reviews-box">
+          <img class="client-img" src="/Images/reddington.png" alt="reddington m." />
+          <h3 class="client-name">Reddington M.</h3>
+          <p class="review">Integration with PLUCK has transformed our app. Exceptional support and remarkable results. Highly recommended!</p>
+        </div>
+
+        <div class="reviews-box">
+          <img class="client-img" src="/Images/derick.png" alt="derick-mckinney" />
+          <h3 class="client-name">Derick McKinney</h3>
+          <p class="review">Integration with PLUCK has transformed our app. Exceptional support and remarkable results. Highly recommended!</p>
+        </div>
+      </div>
+
+      <div class="carousel-track-frame">
+        <div class="carousel-track">
+          <div v-for="n in totalBox" :key="n" class="carousel-segment" :class="{ 'segment-active': (n - 1) === currentIndex }"></div>
+        </div>
+      </div>
+
+    </section>
+    <section class="subs-sect">
+      <div class="subs-box">
+        <h2 class="subs-text">Ready to unlock the full potential?</h2>
+      </div>
+
+      <form class="subscribe-form" @submit.prevent="handleSubscribe">
+        <input type="email" class="subscribe-input" placeholder="Your Email Address" v-model="email" required />
+        <button type="submit" class="subscribe-btn">GET STARTED</button>
+      </form>
+
+    </section>
+    <section class="footer">
+      <div class="footer-frame">
+        <div class="lhs-footer">
+          <div class="pluck-frame">
+            <div class="pluck-logo">
+              <svg width="51" height="46" viewBox="0 0 51 46" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect x="22.6053" width="31.9688" height="31.9688" rx="15.9844" transform="rotate(45 22.6053 0)" fill="#6D3FFF"/>
+              <rect x="35.1563" y="9.95605" width="18.9495" height="18.9495" rx="9.47473" transform="rotate(45 35.1563 9.95605)" fill="#082539" stroke="white" stroke-width="2.66407"/>
+              </svg>
+            </div>
+            <p class="pluck">Pluck</p>
+          </div>
+          <div class="lhs-subtext">Our SaaS platform offers a seamless API dashboard for effortless integration and management</div>
+          <div type="email" class="pluck-mail">hello@pluck.com</div>
+          <div class="pluck-num">+1-800-123 4567</div>
+        </div>
+
+        <div class="rhs-footer">
+          <div class="company-details">
+            <p class="company">Company</p>
+            <div class="company-item">
+              <p class="company-items">About</p>
+              <p class="company-items">Services</p>
+              <p class="company-items">Careers</p>
+              <p class="company-items">Blog</p>
+              <p class="company-items">Pricing</p>
+            </div>
+          </div>
+
+          <div class="company-details">
+            <p class="company">Contact</p>
+            <div class="company-item">
+              <p class="company-items">Help</p>
+              <p class="company-items">FAQs</p>
+              <p class="company-items">Press</p>
+              <p class="company-items">Terms & Conditions</p>
+              <p class="company-items">Partners</p>
+            </div>
+          </div>
+
+          <div class="company-details">
+            <p class="company">Discover</p>
+            <div class="company-item">
+              <p class="company-items">Affliate</p>
+              <p class="company-items">Partner Program</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <hr class="hor-line" />
+
+      <div class="copyright-frame">
+        <p class="copyright">Copyright © 2032 Pluck®. All rights reserved.</p>
+        <div class="social-media">
+          <div class="brand-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M22.46 6C21.69 6.35 20.86 6.58 20 6.69C20.88 6.16 21.56 5.32 21.88 4.31C21.05 4.81 20.13 5.16 19.16 5.36C18.37 4.5 17.26 4 16 4C13.65 4 11.73 5.92 11.73 8.29C11.73 8.63 11.77 8.96 11.84 9.27C8.27998 9.09 5.10998 7.38 2.99998 4.79C2.62998 5.42 2.41998 6.16 2.41998 6.94C2.41998 8.43 3.16998 9.75 4.32998 10.5C3.61998 10.5 2.95998 10.3 2.37998 10V10.03C2.37998 12.11 3.85998 13.85 5.81998 14.24C5.19071 14.4122 4.53007 14.4362 3.88998 14.31C4.16158 15.1625 4.69351 15.9084 5.41099 16.4429C6.12847 16.9775 6.99543 17.2737 7.88998 17.29C6.37361 18.4904 4.49397 19.1393 2.55998 19.13C2.21998 19.13 1.87998 19.11 1.53998 19.07C3.43998 20.29 5.69998 21 8.11998 21C16 21 20.33 14.46 20.33 8.79C20.33 8.6 20.33 8.42 20.32 8.23C21.16 7.63 21.88 6.87 22.46 6Z" fill="black"/>
+            </svg>
+          </div>
+          <div class="brand-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M6.94 5.00002C6.93974 5.53046 6.72877 6.03906 6.35351 6.41394C5.97825 6.78883 5.46944 6.99929 4.939 6.99902C4.40857 6.99876 3.89997 6.78779 3.52508 6.41253C3.1502 6.03727 2.93974 5.52846 2.94 4.99802C2.94027 4.46759 3.15124 3.95899 3.5265 3.5841C3.90176 3.20922 4.41057 2.99876 4.941 2.99902C5.47144 2.99929 5.98004 3.21026 6.35492 3.58552C6.72981 3.96078 6.94027 4.46959 6.94 5.00002ZM7 8.48002H3V21H7V8.48002ZM13.32 8.48002H9.34V21H13.28V14.43C13.28 10.77 18.05 10.43 18.05 14.43V21H22V13.07C22 6.90002 14.94 7.13002 13.28 10.16L13.32 8.48002Z" fill="black"/>
+            </svg>
+          </div>
+          <div class="brand-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M14 13.5H16.5L17.5 9.5H14V7.5C14 6.47 14 5.5 16 5.5H17.5V2.14C17.174 2.097 15.943 2 14.643 2C11.928 2 10 3.657 10 6.7V9.5H7V13.5H10V22H14V13.5Z" fill="black"/>
+            </svg>
+          </div>
+        </div>
       </div>
     </section>
-    <section class="subs-sect"></section>
-    <section class="footer"></section>
   </section>
 </template>
 
 
 <style scoped>
+.hor-line {
+  width: 100%;
+  border: none;
+  border-top: none;
+  border-top: 1px solid #EBECEF;
+  margin: 0;
+  color: #000000;
+}
+.brand-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 39.73px;
+  height: 39.73px;
+  background: #DEE9F3;
+  border-radius: 7.44846px;
+}
+.social-media {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 30px;
+  margin-right: 0;
+}
+.copyright {
+  margin: 0;
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 34px;
+  color: rgba(31, 31, 57, 0.5);
+}
+.copyright-frame {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 80px 260px;
+}
+.discover-details {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 0px;
+  gap: 26px;
+  width: 100%;
+  height: 202px;
+  box-sizing: border-box;
+}
+.company-items {
+  font-family: 'Inter', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 28px;
+  white-space: nowrap;
+  color: rgba(0, 0, 0, 0.5);
+  margin: 0;
+}
+.company-item {
+  flex-direction: column;
+  display: flex;
+  align-items: flex-start;
+  align-self: stretch;
+  gap: 46px;
+}
+.company {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 28px;
+  color: #2E2A4A;
+  margin: 0;
+}
+.company-details {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 0px;
+  gap: 26px;
+  flex-shrink: 0;
+}
+.rhs-footer {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  gap: 80px;
+}
+.pluck-num {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 28px;
+  color: rgba(0, 0, 0, 0.5);
+}
+.pluck-mail {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 28px;
+  color: rgba(0, 0, 0, 0.5);
+}
+.lhs-subtext {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 34px;
+  color: rgba(31, 31, 57, 0.5);
+}
+.lhs-footer {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 24px;
+  width: 452px;
+  height: 275.21px;
+}
+.footer-frame {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 100px 260px;
+  gap: 85px;
+}
+.footer {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  width: 100%;
+  background: #FFFFFF;
+}
+.subscribe-form {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16.1224px 16.1224px 16.1224px 32.2449px;
+  gap: 13.01px;
+  width: 512px;
+  height: 79px;
+  background: #FFFFFF;
+  border: 1.12857px solid #EBECEF;
+  border-radius: 13.007px;
+}
+
+.subscribe-input {
+  flex: 1;
+  min-width: 0;
+  border: none;
+  outline: none;
+  background: transparent;
+  font-family: 'Inter';
+  font-size: 18px;
+  color: #1F1F39;
+}
+
+.subscribe-input::placeholder {
+  color: rgba(31, 31, 57, 0.5);
+}
+
+.subscribe-btn {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 14px 24px;
+  background: #6D3FFF;
+  border: none;
+  border-radius: 8px;
+  font-family: 'Source Sans Pro';
+  font-weight: 700;
+  font-size: 14px;
+  letter-spacing: 0.04em;
+  color: #FFFFFF;
+  cursor: pointer;
+}
+.subs-text {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 56px;
+  line-height: 80px;
+  text-align: center;
+  margin: 0;
+  color: #FFFFFF;
+  align-self: stretch;
+}
+.subs-textbox {
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+}
+.subs-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 50px 0px;
+  gap: 50px;
+  width: 100%;
+  align-self: stretch;
+}
+.subs-sect {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 100px 260px;
+  gap: 40px;
+  width: 100%;
+  height: 520px;
+  box-sizing: border-box;
+  background: #2E2A4A;
+}
+.carousel-segment.segment-active {
+  width: 48px;
+  background: var(--Schemes-Primary, #0F38B3);
+}
+.carousel-segment {
+  width: 24px;
+  height: 4px;
+  border-radius: 100px;
+  background: var(--Schemes-Outline-Variant, #C4C5D6);
+  transition: background 0.3s ease-in, width 0.3s ease-in;
+}
+.carousel-track {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  width: 141.5px;
+}
+.carousel-track-frame {
+  display: flex;
+  justify-content: center;
+  align-self: stretch;
+}
 .review {
   font-family: 'Inter';
   font-style: normal;
@@ -717,6 +1079,7 @@
   display: flex;
   align-items: center;
   color: #000000;
+  margin: 0;
 }
 .pluck-logo {
   display: flex;
@@ -753,9 +1116,3 @@
   background: #FFFFFF;
 }
 </style>
-
-<script>
-export default {
-  name: 'MyPage',
-};
-</script>
