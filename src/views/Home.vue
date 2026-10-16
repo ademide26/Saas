@@ -73,7 +73,7 @@ export default {
         <div class="hero-wrap">
 
           <div class="hero-content">
-            <h1 class="hero-heading">A modern ticketing and workflow system built into Slack</h1>
+            <h1 class="hero-heading">A modern ticketing and workflow system built into <span class="hero-accent">Slack</span></h1>
             <div class="hero-subtext">Wrangle makes it easy for customers or colleagues to get help, ensures nothing falls through the cracks, and shows off how hard your team is working.</div>
 
             <div class="hero-cta">
@@ -246,6 +246,42 @@ export default {
 </template>
 
 <style scoped>
+.hero-visual {
+  isolation: isolate;
+}
+
+.dashboard-sect {
+  filter: drop-shadow(0 24px 40px rgba(73, 24, 126, 0.22));
+}
+
+.hero-accent {
+  background: linear-gradient(90deg, #7823B9, #B455F0);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.trusted-label {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+.trusted-label::before,
+.trusted-label::after {
+  content: "";
+  width: 48px;
+  height: 1px;
+  background: #D0D5DD;
+}
+
+.slack-box {
+  box-shadow: 0 8px 18px -8px rgba(120, 35, 185, 0.65);
+  transition: background 0.2s ease, box-shadow 0.2s ease;
+}
+.slack-box:hover {
+  box-shadow: 0 10px 24px -8px rgba(120, 35, 185, 0.8);
+}
+
 .slack-box:hover {
   background: #611D99;
 }
@@ -319,11 +355,14 @@ export default {
 
 .blob-shape {
   position: absolute;
-  top: 10%;
-  right: 12%;
-  width: 90%;
-  height: auto;
-  z-index: 1;
+  top: -6%;
+  right: -4%;
+  width: 72%;
+  height: 72%;
+  z-index: -1;
+  background: linear-gradient(135deg, rgba(141, 46, 217, 0.45), rgba(78, 221, 244, 0.3));
+  border-radius: 58% 42% 55% 45% / 48% 56% 44% 52%;
+  filter: blur(28px);
 }
 
 .dashboard-mock {
