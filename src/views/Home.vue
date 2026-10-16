@@ -559,20 +559,96 @@ gap: 4px;
 }
 
 .thumbnail {
-  position: relative;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
   width: 100%;
-  aspect-ratio: 1920 / 1200;
+  min-height: 62.5vw;
+  padding: 4.17% 5% 0;
   background: linear-gradient(180deg, #8D2ED9 0%, #49187E 50%, #140322 100%);
   border-radius: 42px 42px 0px 0px;
 }
 
 .desktop {
-  position: absolute;
-  width: 90%;
-  height: 93.33%;
-  left: 5%;
-  top: 6.67%;
+  flex: 1;
   background: #f3f5fc;
   border-radius: 32px 32px 0px 0px;
+}
+@media (max-width: 1200px) {
+  .hero-wrap {
+    justify-content: center;
+  }
+  .hero-content,
+  .hero-visual {
+    flex: 1 1 100%;
+    max-width: 640px;
+  }
+  .hero-visual {
+    height: auto;
+    aspect-ratio: auto;
+  }
+  .dashboard-mock {
+    position: static;
+  }
+  .dashboard-sect {
+    width: 100%;
+  }
+}
+
+
+@media (max-width: 900px) {
+  .nav-sect,
+  .divider {
+    display: none;
+  }
+}
+
+/* Phones */
+@media (max-width: 600px) {
+  .thumbnail {
+    padding: 12px 12px 0;
+    border-radius: 24px 24px 0px 0px;
+  }
+  .desktop {
+    border-radius: 16px 16px 0px 0px;
+  }
+  .integrate-sect {
+    height: 72px;
+    padding: 0 16px;
+  }
+  .wrangle-text {
+    font-size: 24px;
+  }
+  .login-slack {
+    gap: 12px;
+  }
+  .login-slack .slack-box {
+    display: none;
+  }
+  .hero-sect {
+    padding: 24px 16px 0;
+  }
+  .hero-heading {
+    font-size: 28px;
+  }
+  .hero-cta {
+    align-self: stretch;
+    gap: 28px;
+  }
+  .hero-btn-box {
+    flex-wrap: wrap;
+    gap: 12px;
+    width: 100%;
+  }
+  .hero-btn-box button {
+    flex: 1 1 auto;
+  }
+  .trust-frame {
+    flex-wrap: wrap;
+    gap: 8px 16px;
+  }
+  .trusted-sect {
+    gap: 24px;
+  }
 }
 </style>
