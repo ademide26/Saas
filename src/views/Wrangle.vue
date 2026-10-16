@@ -1,6 +1,6 @@
 <script>
 export default {
-  name: 'HomePage',
+  name: 'WranglePage',
 }
 </script>
 

@@ -1,6 +1,6 @@
 <script>
 export default {
-  name: 'MyPage',
+  name: 'PluckPage',
   data() {
     return {
       currentIndex: 0,

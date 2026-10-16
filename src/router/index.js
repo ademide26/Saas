@@ -1,5 +1,5 @@
-import Home from '@/views/Home.vue'
-import Mypage from '@/views/mypage.vue'
+import Pluck from '@/views/Pluck.vue'
+import Wrangle from '@/views/Wrangle.vue'
 import { createRouter, createWebHistory } from 'vue-router'
 
 const router = createRouter({
@@ -7,13 +7,13 @@ const router = createRouter({
   routes: [
     {
       path: '/',
-      name: 'HomePage',
-      component: Home
+      name: 'WranglePage',
+      component: Wrangle
     },
     {
-      path: '/mypage',
-      name: 'mypage',
-      component: Mypage
+      path: '/pluckpage',
+      name: 'PluckPage',
+      component: Pluck
     }
   ],
 })
