@@ -1,25 +1,50 @@
 <script>
+const sample = 'Integration with PLUCK has transformed our app. Exceptional support and remarkable results. Highly recommended!'
+
 export default {
-  name: 'PluckPage',
+  name: 'MyPage',
   data() {
     return {
       currentIndex: 0,
-      totalBox: 3,
-      email: ''
+      email: '',
+      menuOpen: false,
+      timer: null,
+      reviews: [
+        { name: 'Michelle Muara', img: '/Images/michelle.png', text: sample },
+        { name: 'Reddington M.', img: '/Images/reddington.png', text: sample },
+        { name: 'Derick McKinney', img: '/Images/derick.png', text: sample }
+      ]
     }
   },
-methods:  {
-  handleSubscribe() {
-    console.log('Subscribing:', this.email)
+  mounted() {
+    this.startTimer()
+  },
+  beforeUnmount() {
+    clearInterval(this.timer)
+  },
+  methods: {
+    handleSubscribe() {
+      console.log('Subscribing:', this.email)
+    },
+    goTo(i) {
+      this.currentIndex = i
+      this.startTimer()
+    },
+    startTimer() {
+      clearInterval(this.timer)
+      if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return
+      this.timer = setInterval(() => {
+        this.currentIndex = (this.currentIndex + 1) % this.reviews.length
+      }, 3500)
+    }
   }
 }
-};
 </script>
 
 <template>
   <section class="whole-page">
     <section class="main-sect">
-      <div class="nav-sect">
+      <div class="nav-sect" id="home">
         <div class="pluck-frame">
           <div class="pluck-logo">
             <svg width="51" height="46" viewBox="0 0 51 46" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -29,22 +54,28 @@ methods:  {
           </div>
           <div class="pluck">Pluck</div>
         </div>
-        <div class="nav-bar">
-          <div class="nav-box">
+
+        <button class="menu-btn" :class="{ 'menu-open': menuOpen }" aria-label="Toggle menu" :aria-expanded="menuOpen" @click="menuOpen = !menuOpen">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+        <div class="nav-bar" :class="{ 'nav-open': menuOpen }">
+          <a href="#home" class="nav-box" @click="menuOpen = false">
             <div class="active-nav-text">Home</div>
-          </div>
-          <div class="nav-box">
+          </a>
+          <a href="#features" class="nav-box" @click="menuOpen = false">
             <div class="nav-text">About Us</div>
-          </div>
-          <div class="nav-box">
+          </a>
+          <a href="#details" class="nav-box" @click="menuOpen = false">
             <div class="nav-text">Our Services</div>
-          </div>
-          <div class="nav-box">
+          </a>
+          <a href="#" class="nav-box" @click.prevent="menuOpen = false">
             <div class="nav-text">Pricings</div>
-          </div>
-          <div class="nav-box">
+          </a>
+          <a href="#" class="nav-box" @click.prevent="menuOpen = false">
             <div class="nav-text">Blogs</div>
-          </div>
+          </a>
           <button class="trial-box">
             <div class="trial-text">FREE TRIAL NOW</div>
           </button>
@@ -90,7 +121,7 @@ methods:  {
       </div>
     </section>
 
-    <section class="feature-sect">
+    <section class="feature-sect" id="features">
 
       <div class="feature-div">
         <div class="left-feature">
@@ -164,7 +195,7 @@ methods:  {
 
     </section>
 
-    <section class="details-sect">
+    <section class="details-sect" id="details">
       <div class="detail-hero-frame">
         <div class="detail-hero-text"> Get in detail on how we do it</div>
         <div class="detail-hero-subtext">Brace yourself for an extraordinary journey into the future of technology.</div>
@@ -232,38 +263,34 @@ methods:  {
 
     </section>
 
-    <section class="testimonials-sect">
+    <section class="testimonials-sect" id="testimonials">
       <div class="detail-hero-frame">
         <div class="detail-hero-text">What our client say</div>
         <div class="detail-hero-subtext">Brace yourself for an extraordinary journey into the future of technology.</div>
       </div>
       <div class="reviews-frame">
-        <div class="reviews-box">
-          <img class="client-img" src="/Images/michelle.png" alt="michelle-muara" />
-          <h3 class="client-name">Michelle Muara</h3>
-          <p class="review">Integration with PLUCK has transformed our app. Exceptional support and remarkable results. Highly recommended!</p>
-        </div>
-
-        <div class="reviews-box">
-          <img class="client-img" src="/Images/reddington.png" alt="reddington m." />
-          <h3 class="client-name">Reddington M.</h3>
-          <p class="review">Integration with PLUCK has transformed our app. Exceptional support and remarkable results. Highly recommended!</p>
-        </div>
-
-        <div class="reviews-box">
-          <img class="client-img" src="/Images/derick.png" alt="derick-mckinney" />
-          <h3 class="client-name">Derick McKinney</h3>
-          <p class="review">Integration with PLUCK has transformed our app. Exceptional support and remarkable results. Highly recommended!</p>
+        <div v-for="(review, i) in reviews" :key="review.name" class="reviews-box" :class="{ 'review-active': i === currentIndex }">
+          <img class="client-img" :src="review.img" :alt="review.name" />
+          <h3 class="client-name">{{ review.name }}</h3>
+          <p class="review">{{ review.text }}</p>
         </div>
       </div>
 
       <div class="carousel-track-frame">
         <div class="carousel-track">
-          <div v-for="n in totalBox" :key="n" class="carousel-segment" :class="{ 'segment-active': (n - 1) === currentIndex }"></div>
+          <button
+            v-for="(review, i) in reviews"
+            :key="review.name"
+            class="carousel-segment"
+            :class="{ 'segment-active': i === currentIndex }"
+            :aria-label="'Show review ' + (i + 1)"
+            @click="goTo(i)"
+          ></button>
         </div>
       </div>
 
     </section>
+
     <section class="subs-sect">
       <div class="subs-box">
         <h2 class="subs-text">Ready to unlock the full potential?</h2>
@@ -275,6 +302,7 @@ methods:  {
       </form>
 
     </section>
+
     <section class="footer">
       <div class="footer-frame">
         <div class="lhs-footer">
@@ -296,30 +324,30 @@ methods:  {
           <div class="company-details">
             <p class="company">Company</p>
             <div class="company-item">
-              <p class="company-items">About</p>
-              <p class="company-items">Services</p>
-              <p class="company-items">Careers</p>
-              <p class="company-items">Blog</p>
-              <p class="company-items">Pricing</p>
+              <a class="company-items" href="#">About</a>
+              <a class="company-items" href="#">Services</a>
+              <a class="company-items" href="#">Careers</a>
+              <a class="company-items" href="#">Blog</a>
+              <a class="company-items" href="#">Pricing</a>
             </div>
           </div>
 
           <div class="company-details">
             <p class="company">Contact</p>
             <div class="company-item">
-              <p class="company-items">Help</p>
-              <p class="company-items">FAQs</p>
-              <p class="company-items">Press</p>
-              <p class="company-items">Terms & Conditions</p>
-              <p class="company-items">Partners</p>
+              <a class="company-items" href="#">Help</a>
+              <a class="company-items" href="#">FAQs</a>
+              <a class="company-items" href="#">Press</a>
+              <a class="company-items" href="#">Terms & Conditions</a>
+              <a class="company-items" href="#">Partners</a>
             </div>
           </div>
 
           <div class="company-details">
             <p class="company">Discover</p>
             <div class="company-item">
-              <p class="company-items">Affliate</p>
-              <p class="company-items">Partner Program</p>
+              <a class="company-items" href="#">Affliate</a>
+              <a class="company-items" href="#">Partner Program</a>
             </div>
           </div>
 
@@ -331,21 +359,21 @@ methods:  {
       <div class="copyright-frame">
         <p class="copyright">Copyright © 2032 Pluck®. All rights reserved.</p>
         <div class="social-media">
-          <div class="brand-icon">
+          <a href="#" class="brand-icon" aria-label="Twitter">
             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M22.46 6C21.69 6.35 20.86 6.58 20 6.69C20.88 6.16 21.56 5.32 21.88 4.31C21.05 4.81 20.13 5.16 19.16 5.36C18.37 4.5 17.26 4 16 4C13.65 4 11.73 5.92 11.73 8.29C11.73 8.63 11.77 8.96 11.84 9.27C8.27998 9.09 5.10998 7.38 2.99998 4.79C2.62998 5.42 2.41998 6.16 2.41998 6.94C2.41998 8.43 3.16998 9.75 4.32998 10.5C3.61998 10.5 2.95998 10.3 2.37998 10V10.03C2.37998 12.11 3.85998 13.85 5.81998 14.24C5.19071 14.4122 4.53007 14.4362 3.88998 14.31C4.16158 15.1625 4.69351 15.9084 5.41099 16.4429C6.12847 16.9775 6.99543 17.2737 7.88998 17.29C6.37361 18.4904 4.49397 19.1393 2.55998 19.13C2.21998 19.13 1.87998 19.11 1.53998 19.07C3.43998 20.29 5.69998 21 8.11998 21C16 21 20.33 14.46 20.33 8.79C20.33 8.6 20.33 8.42 20.32 8.23C21.16 7.63 21.88 6.87 22.46 6Z" fill="black"/>
             </svg>
-          </div>
-          <div class="brand-icon">
+          </a>
+          <a href="#" class="brand-icon" aria-label="LinkedIn">
             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M6.94 5.00002C6.93974 5.53046 6.72877 6.03906 6.35351 6.41394C5.97825 6.78883 5.46944 6.99929 4.939 6.99902C4.40857 6.99876 3.89997 6.78779 3.52508 6.41253C3.1502 6.03727 2.93974 5.52846 2.94 4.99802C2.94027 4.46759 3.15124 3.95899 3.5265 3.5841C3.90176 3.20922 4.41057 2.99876 4.941 2.99902C5.47144 2.99929 5.98004 3.21026 6.35492 3.58552C6.72981 3.96078 6.94027 4.46959 6.94 5.00002ZM7 8.48002H3V21H7V8.48002ZM13.32 8.48002H9.34V21H13.28V14.43C13.28 10.77 18.05 10.43 18.05 14.43V21H22V13.07C22 6.90002 14.94 7.13002 13.28 10.16L13.32 8.48002Z" fill="black"/>
             </svg>
-          </div>
-          <div class="brand-icon">
+          </a>
+          <a href="#" class="brand-icon" aria-label="Facebook">
             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M14 13.5H16.5L17.5 9.5H14V7.5C14 6.47 14 5.5 16 5.5H17.5V2.14C17.174 2.097 15.943 2 14.643 2C11.928 2 10 3.657 10 6.7V9.5H7V13.5H10V22H14V13.5Z" fill="black"/>
             </svg>
-          </div>
+          </a>
         </div>
       </div>
     </section>
@@ -439,6 +467,7 @@ methods:  {
   display: flex;
   align-items: center;
   gap: 4px;
+  text-decoration: none;
 }
 .nav-text {
   font-weight: 400;
@@ -1012,24 +1041,214 @@ methods:  {
   border-radius: 7.4px;
 }
 
-/* ================= Responsive ================= */
+/* ---------- Focus (keyboard users) ---------- */
+.trial-box:focus-visible,
+.all-features:focus-visible,
+.subscribe-btn:focus-visible,
+.nav-box:focus-visible,
+.company-items:focus-visible,
+.brand-icon:focus-visible,
+.carousel-segment:focus-visible,
+.menu-btn:focus-visible {
+  outline: 2px solid #6D3FFF;
+  outline-offset: 3px;
+}
 
-/* Small laptops: less side padding */
+/* ---------- Buttons ---------- */
+.trial-box {
+  cursor: pointer;
+  transition: background 0.2s ease, transform 0.1s ease;
+}
+.trial-box:hover {
+  background: #CBDDEE;
+}
+.all-features {
+  cursor: pointer;
+  transition: background 0.2s ease, transform 0.1s ease;
+}
+.all-features:hover {
+  background: #6D3FFF;
+}
+.see-all {
+  transition: color 0.2s ease;
+}
+.all-features:hover .see-all {
+  color: #FFFFFF;
+}
+.subscribe-btn {
+  transition: background 0.2s ease, transform 0.1s ease;
+}
+.subscribe-btn:hover {
+  background: #5B2FE0;
+}
+.trial-box:active,
+.all-features:active,
+.subscribe-btn:active {
+  transform: translateY(1px);
+}
+
+/* ---------- Nav ---------- */
+.nav-box {
+  cursor: pointer;
+}
+.nav-text {
+  transition: color 0.2s ease;
+}
+.nav-box:hover .nav-text {
+  color: #6D3FFF;
+}
+.active-nav-text {
+  position: relative;
+}
+.active-nav-text::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -6px;
+  height: 2px;
+  border-radius: 2px;
+  background: #6D3FFF;
+}
+
+/* Hamburger (hidden on desktop, shown in the 1024px query) */
+.menu-btn {
+  display: none;
+  position: relative;
+  width: 40px;
+  height: 40px;
+  padding: 0;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+}
+.menu-btn span {
+  position: absolute;
+  left: 9px;
+  width: 22px;
+  height: 2px;
+  border-radius: 2px;
+  background: #000000;
+  transition: transform 0.25s ease, opacity 0.2s ease;
+}
+.menu-btn span:nth-child(1) {
+  top: 13px;
+}
+.menu-btn span:nth-child(2) {
+  top: 19px;
+}
+.menu-btn span:nth-child(3) {
+  top: 25px;
+}
+.menu-btn.menu-open span:nth-child(1) {
+  transform: translateY(6px) rotate(45deg);
+}
+.menu-btn.menu-open span:nth-child(2) {
+  opacity: 0;
+}
+.menu-btn.menu-open span:nth-child(3) {
+  transform: translateY(-6px) rotate(-45deg);
+}
+
+/* ---------- Footer links, socials, partner logos ---------- */
+.company-items {
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+.company-items:hover {
+  color: #6D3FFF;
+}
+.brand-icon {
+  transition: background 0.2s ease;
+}
+.brand-icon:hover {
+  background: #C9DBEC;
+}
+.partner {
+  opacity: 0.85;
+  transition: opacity 0.3s ease;
+}
+.partner:hover {
+  opacity: 1;
+  mix-blend-mode: normal;
+}
+
+/* ---------- Subscribe form focus ---------- */
+.subscribe-form {
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+.subscribe-form:focus-within {
+  border-color: #6D3FFF;
+  box-shadow: 0 0 0 3px rgba(109, 63, 255, 0.25);
+}
+
+/* ---------- Carousel ---------- */
+.carousel-segment {
+  position: relative;
+  padding: 0;
+  border: none;
+  cursor: pointer;
+}
+.carousel-segment::after {
+  content: "";
+  position: absolute;
+  inset: -12px -2px; /* bigger click area than the 4px bar */
+}
+.reviews-box {
+  opacity: 0.55;
+  transition: opacity 0.4s ease, box-shadow 0.4s ease;
+}
+.reviews-box.review-active {
+  opacity: 1;
+  box-shadow: 0 12px 32px -12px rgba(31, 31, 57, 0.2);
+}
+
+/* ---------- Motion ---------- */
+@keyframes fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.main-frame {
+  animation: fade-up 0.7s ease;
+}
+:global(html) {
+  scroll-behavior: smooth;
+}
+
+/* Respect "reduce motion" system setting */
+@media (prefers-reduced-motion: reduce) {
+  .whole-page,
+  .whole-page * {
+    animation: none !important;
+    transition: none !important;
+  }
+  :global(html) {
+    scroll-behavior: auto;
+  }
+}
+
+
+
+/* ===== Responsive ===== */
+
 @media (max-width: 1400px) {
   .whole-page {
     --pad-x: 120px;
   }
 }
 
-/* Tablets: sections stack, nav links hide */
+
 @media (max-width: 1024px) {
   .whole-page {
     --pad-x: 40px;
     --pad-y: 60px;
     --hero-x: 10%;
-  }
-  .nav-box {
-    display: none;
   }
   .partner-sect {
     flex-direction: column;
@@ -1059,6 +1278,41 @@ methods:  {
     width: auto;
     min-width: 0;
   }
+  .nav-sect {
+  position: relative;
+}
+.menu-btn {
+  display: block;
+}
+.nav-bar {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 16px;
+  right: 16px;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 16px;
+  margin: 0;
+  padding: 20px;
+  background: #FFFFFF;
+  border-radius: 12px;
+  box-shadow: 0 16px 40px -12px rgba(31, 31, 57, 0.25);
+  z-index: 10;
+}
+.nav-bar.nav-open {
+  display: flex;
+  animation: fade-up 0.25s ease;
+}
+.reviews-box {
+  display: none;
+  opacity: 1;
+}
+.reviews-box.review-active {
+  display: flex;
+  box-shadow: none;
+  animation: fade-up 0.4s ease;
+}
 
   /* Phone first, then the four cards, all centred */
   .details-main-frame {
