@@ -5,13 +5,13 @@ const shot = (name) => Object.entries(shots).find(([p]) => p.endsWith('/' + name
 export const profile = {
   name: 'Ademide',
   initials: 'A.I',
-  location: 'Nigeria',
-  phone: '+234 8079953667',
+  location: '',
+  phone: '0807 995 3667',
   email: 'ademideadekanmi@gmail.com',
-  linkedin: '[LINKEDIN URL]',
+  linkedin: 'www.linkedin.com/in/ademide-adekanmi-1b8b70295',
   githubUrl: '', // leave empty: the GitHub link stays hidden until you fill this in
   about:
-    'I’m a Computer Engineering student in Nigeria and a freelance frontend developer. I build clean, responsive Vue.js interfaces from Figma designs and take them all the way to a live URL.',
+  'I’m a Computer Engineering student in Nigeria and a freelance frontend developer. I build clean, responsive Vue.js interfaces from Figma designs and take them all the way to a live URL, using AI tools to work faster and reviewing everything that ships.',
 }
 
 export const projects = [
@@ -19,13 +19,13 @@ export const projects = [
     published: true,
     title: 'Wrangle',
     kind: 'Help desk SaaS landing page',
-    blurb: 'My Vue implementation of a community Figma design, built to stay fluid from phones to 1920px screens.',
+    blurb: 'My Vue implementation of a community Figma design, built to stay fluid on any screen.',
     image: shot('wrangle.png'),
     live: 'https://ademidev.netlify.app/wranglepage',
     githubUrl: '',
     tags: ['Vue 3', 'Vue Router', 'CSS', 'Figma', 'GitHub', 'Netlify'],
     highlights: [
-      'Fluid layout on a 1920px base using aspect-ratio and percentage positioning',
+      'Fluid layout on a 1920px base',
       'Responsive nav using CSS variables and clamp()',
       'Layered hero with blob, dashboard and Slack mock',
       'Brand-purple hover states and a grayscale “trusted by” logo row',
@@ -42,12 +42,15 @@ export const projects = [
     published: true,
     title: 'Pluck',
     kind: 'SaaS landing page',
-    blurb: 'My Vue implementation of a community Figma landing page kit. [ADD ONE LINE ON WHAT YOU ENHANCED]',
+    blurb: 'My Vue implementation of a community Figma landing page kit. Enhancing the navigation and interactiveness.',
     image: shot('pluck.png'),
     live: 'https://ademidev.netlify.app/pluckpage',
     githubUrl: '',
     tags: ['Vue 3', 'Vue Router', 'CSS', 'Figma', 'GitHub', 'Netlify'],
-    highlights: ['[LIST 3 TO 4 THINGS YOU IMPLEMENTED OR ENHANCED, e.g. hero dashboard mockup, trusted-by logo row, feature cards, responsiveness]'],
+    highlights: [
+      'Responsiveness',
+      'Logo row interactivity',
+      'A timed visual of the reviews'],
     credit: {
       title: 'Pluck',
       creator: 'Krisna Wiyana',
@@ -75,8 +78,12 @@ export const differences = [
   { t: 'Design-faithful', d: 'I rebuild Figma designs closely and keep them fluid across screen sizes.' },
   { t: 'Design to live URL', d: 'I take projects from Figma to GitHub to Netlify, including the deployment debugging.' },
   {
+  t: 'AI-assisted, human-reviewed',
+  d: 'I use AI tools to move faster on planning, debugging and first drafts. I review and test everything before it ships, and I can explain why each fix works.',
+  },
+  {
     t: 'Engineer’s mindset',
-    d: 'Computer Engineering at FUTA plus networking exposure (CCNA in progress, internship experience with Cisco, Fortinet and Palo Alto technologies), so I understand how what I build gets delivered and secured.',
+    d: 'Computer Engineering at FUTA plus networking exposure (CCNA in progress, internship experience with Cisco), so I understand how what I build gets delivered and secured.',
   },
 ]
 
@@ -95,8 +102,8 @@ export const services = [
 export const skills = [
   { group: 'Frontend', items: ['HTML', 'CSS', 'JavaScript', 'Vue.js', 'Vue Router', 'Bootstrap', 'JSON and fetch()'] },
   { group: 'Workflow', items: ['Figma', 'Git and GitHub', 'Netlify', 'npm', 'Vite', 'VS Code'] },
-  { group: 'Networking', items: ['IP addressing and subnetting', 'Routers and switches', 'Basic troubleshooting', 'Cisco fundamentals'] },
-  { group: 'Engineering foundation', items: ['C', 'MATLAB/Simulink', 'Proteus', 'Digital systems'] },
+  { group: 'Networking', items: ['IP addressing and subnetting', 'Routers and switches', 'Basic troubleshooting', 'Cisco fundamentals'] },/*
+  { group: 'Engineering foundation', items: ['C', 'MATLAB/Simulink', 'Proteus', 'Digital systems'] },*/
 ]
 
 export const timeline = [
@@ -106,7 +113,12 @@ export const timeline = [
     w: 'OURANOS Technologies Limited, Lagos, Oct to Dec 2025',
     d: 'Networking fundamentals, device connectivity, and exposure to enterprise networking and security tools.',
   },
-  { t: 'Currently learning', w: '', d: 'CCNA preparation (in progress), Cisco Networking Basics, Cisco IoT and Digital Transformation.' },
+  {
+    t: 'IT Intern',
+    w: 'Remedial Health, Lagos, May to Oct 2026',
+    d: 'Worked on web development tasks using HTML, CSS, Bootstrap and JavaScript. Contributed to the development of the flows of pages of different sections of a newly built site.'
+  },
+  { t: 'Currently learning', d: 'Javascript, CCNA preparation (in progress).' },
 ]
 
 // Add real testimonials here and the section appears. Empty means hidden.

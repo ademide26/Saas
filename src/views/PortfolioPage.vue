@@ -48,7 +48,7 @@ onBeforeUnmount(() => {
             <p class="pill"><i></i>Open to freelance projects</p>
             <h1>Hi, I'm {{ profile.name }}. I turn Figma designs into fast, pixel-accurate web pages.</h1>
             <p class="lead">
-              Frontend developer and Computer Engineering student in Nigeria, building responsive Vue.js interfaces from
+              Frontend developer and Computer Engineering student, building responsive Vue.js interfaces from
               design file to live deployment.
             </p>
             <div class="row">
@@ -86,7 +86,7 @@ onBeforeUnmount(() => {
               <p v-if="p.credit" class="credit">
                 Design based on “{{ p.credit.title }}” by
                 <a v-if="p.credit.creatorUrl" :href="p.credit.creatorUrl" target="_blank" rel="noopener noreferrer">{{ p.credit.creator }}</a><template v-else>{{ p.credit.creator }}</template>,
-                licensed under CC BY 4.0 (<a :href="p.credit.fileUrl" target="_blank" rel="noopener noreferrer">Figma file</a>). Implemented in Vue.js by Pappy.
+                licensed under CC BY 4.0 (<a :href="p.credit.fileUrl" target="_blank" rel="noopener noreferrer">Figma file</a>). Implemented in Vue.js by Ademide.
               </p>
             </article>
           </div>
@@ -177,7 +177,6 @@ onBeforeUnmount(() => {
 </style>
 
 <style scoped>
-/* Colour tokens live on .portfolio (not :root) so Wrangle and Pluck are untouched. */
 .portfolio {
   --bg: #0f1117; --card: #171a23; --line: rgba(255, 255, 255, 0.08);
   --text: #e8eaf0; --muted: #9aa0b4; --violet: #8b5cf6; --cyan: #22d3ee;
