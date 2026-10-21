@@ -8,6 +8,7 @@ export const profile = {
   location: '',
   phone: '0807 995 3667',
   email: 'ademideadekanmi@gmail.com',
+  whatsapp: 'https://wa.link/ukd9vb',
   linkedin: 'www.linkedin.com/in/ademide-adekanmi-1b8b70295',
   githubUrl: '', // leave empty: the GitHub link stays hidden until you fill this in
   about:
