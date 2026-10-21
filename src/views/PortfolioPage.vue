@@ -5,7 +5,6 @@ import { profile, projects, differences, steps, services, skills, timeline, test
 const root = ref(null)
 const live = projects.filter((p) => p.published)
 const links = [['work', 'Work'], ['services', 'Services'], ['about', 'About'], ['skills', 'Skills'], ['contact', 'Contact']]
-const tel = profile.phone.replace(/\s/g, '')
 
 // Smooth scroll in JS (not html { scroll-behavior }) so nothing leaks to the other pages.
 const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches
@@ -151,7 +150,7 @@ onBeforeUnmount(() => {
           <div class="card contact">
             <h2>Let's build something</h2>
             <p class="lead">Tell me about your project and I'll get back to you.</p>
-            <p class="via">Prefer to chat? Contact me via:</p>
+            <p class="via">Contact me via:</p>
             <div class="cta">
               <a class="btn wa" :href="profile.whatsapp" target="_blank" rel="noopener noreferrer"
                 aria-label="Chat with me on WhatsApp (opens WhatsApp)">

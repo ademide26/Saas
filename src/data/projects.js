@@ -6,7 +6,6 @@ export const profile = {
   name: 'Ademide',
   initials: 'A.I',
   location: '',
-  phone: '0807 995 3667',
   email: 'ademideadekanmi@gmail.com',
   whatsapp: 'https://wa.link/ukd9vb',
   linkedin: 'www.linkedin.com/in/ademide-adekanmi-1b8b70295',
