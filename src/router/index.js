@@ -1,4 +1,5 @@
 import Pluck from '@/views/Pluck.vue'
+import PortfolioPage from '@/views/PortfolioPage.vue'
 import Wrangle from '@/views/Wrangle.vue'
 import { createRouter, createWebHistory } from 'vue-router'
 
@@ -14,6 +15,11 @@ const router = createRouter({
       path: '/pluckpage',
       name: 'PluckPage',
       component: Pluck
+    },
+    {
+      path: '/',
+      name: 'Portfolio',
+      component: PortfolioPage
     }
   ],
 })

@@ -125,7 +125,7 @@ export default {
             </div>
             <div class="dashboard-mock">
               <div class="dashboard-frame">
-                <img src="/Images/wrangle.png" alt="Wrangle ticket dashboard" class="dashboard-sect" />
+                <img src="/Images/wrangledash.png" alt="Wrangle ticket dashboard" class="dashboard-sect" />
               </div>
             </div>
           </div>
