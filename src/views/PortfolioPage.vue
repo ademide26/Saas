@@ -4,6 +4,9 @@ import { profile, projects, differences, steps, services, skills, timeline, test
 
 const root = ref(null)
 const live = projects.filter((p) => p.published)
+const open = ref({})
+const toggle = (key) => (open.value[key] = !open.value[key])
+const showExp = ref(false)
 const links = [['work', 'Work'], ['services', 'Services'], ['about', 'About'], ['skills', 'Skills'], ['contact', 'Contact']]
 
 // Smooth scroll in JS (not html { scroll-behavior }) so nothing leaks to the other pages.
@@ -69,23 +72,32 @@ onBeforeUnmount(() => {
           <h2>Selected work</h2>
           <p class="sub">My Vue implementations and enhancements of community Figma designs.</p>
           <div class="grid projects">
-            <article v-for="p in live" :key="p.title" class="card proj">
+            <article v-for="(p, i) in live" :key="p.title" class="card proj" :class="{ open: open[p.title] }">
               <div class="media">
                 <img v-if="p.image" :src="p.image" :alt="`${p.title} landing page screenshot`" width="800" height="500" loading="lazy" />
               </div>
               <h3>{{ p.title }}</h3>
               <p class="kind">{{ p.kind }}</p>
-              <p>{{ p.blurb }}</p>
-              <ul class="tags"><li v-for="t in p.tags" :key="t">{{ t }}</li></ul>
-              <ul class="hl"><li v-for="h in p.highlights" :key="h">{{ h }}</li></ul>
+
+              <!-- Hidden on mobile until "More details" is tapped; always visible on desktop -->
+              <div :id="`more-${i}`" class="more">
+                <p>{{ p.blurb }}</p>
+                <ul class="tags"><li v-for="t in p.tags" :key="t">{{ t }}</li></ul>
+                <ul class="hl"><li v-for="h in p.highlights" :key="h">{{ h }}</li></ul>
+              </div>
+
               <div class="row">
                 <a class="btn" :href="p.live" target="_blank" rel="noopener noreferrer">Live site</a>
                 <a v-if="p.githubUrl" class="btn ghost" :href="p.githubUrl" target="_blank" rel="noopener noreferrer">Code</a>
+                <button type="button" class="btn ghost toggle" :aria-expanded="!!open[p.title]" :aria-controls="`more-${i}`" @click="toggle(p.title)">
+                  {{ open[p.title] ? 'Less details' : 'More details' }}
+                </button>
               </div>
+
               <p v-if="p.credit" class="credit">
                 Design based on “{{ p.credit.title }}” by
                 <a v-if="p.credit.creatorUrl" :href="p.credit.creatorUrl" target="_blank" rel="noopener noreferrer">{{ p.credit.creator }}</a><template v-else>{{ p.credit.creator }}</template>,
-                licensed under CC BY 4.0 (<a :href="p.credit.fileUrl" target="_blank" rel="noopener noreferrer">Figma file</a>). Implemented in Vue.js by Ademide.
+                licensed under CC BY 4.0 (<a :href="p.credit.fileUrl" target="_blank" rel="noopener noreferrer">Figma file</a>). Implemented in Vue.js by Pappy.
               </p>
             </article>
           </div>
@@ -114,7 +126,10 @@ onBeforeUnmount(() => {
             <article v-for="d in differences" :key="d.t" class="card"><h3>{{ d.t }}</h3><p>{{ d.d }}</p></article>
           </div>
           <h3 class="how">Experience and education</h3>
-          <ul class="tl">
+          <button type="button" class="btn ghost toggle exp-btn" :aria-expanded="showExp" aria-controls="exp-list" @click="showExp = !showExp">
+            {{ showExp ? 'Hide experience' : 'Show experience' }}
+          </button>
+          <ul id="exp-list" class="tl exp" :class="{ open: showExp}">
             <li v-for="e in timeline" :key="e.t">
               <strong>{{ e.t }}</strong>
               <span v-if="e.w">{{ e.w }}</span>
@@ -269,6 +284,17 @@ a:focus-visible, button:focus-visible { outline: 2px solid var(--cyan); outline-
 /* Scroll reveal sits on section wrappers, not cards, so it never fights the card hover transform. */
 .reveal { opacity: 0; transform: translateY(18px); transition: opacity 0.6s, transform 0.6s; }
 .reveal.in { opacity: 1; transform: none; }
+/* Mobile: collapse project details behind a toggle. Desktop never sees the button. */
+.btn.toggle { display: none; font: inherit; font-weight: 600; cursor: pointer; }
+@media (max-width: 640px) {
+  .proj .more { display: none; }
+  .proj.open .more { display: block; }
+  .btn.toggle { display: inline-block; }
+  .exp { display: none; }
+  .exp.open { display: block; }
+}
+.exp-btn { margin-top: 1rem; }
+
 @media (prefers-reduced-motion: reduce) {
   .reveal { opacity: 1; transform: none; transition: none; }
   .pill i { animation: none; }

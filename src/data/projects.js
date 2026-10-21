@@ -4,7 +4,7 @@ const shot = (name) => Object.entries(shots).find(([p]) => p.endsWith('/' + name
 
 export const profile = {
   name: 'Ademide',
-  initials: 'A.I',
+  initials: ' Ademide A.I',
   location: '',
   email: 'ademideadekanmi@gmail.com',
   whatsapp: 'https://wa.link/ukd9vb',
@@ -25,9 +25,8 @@ export const projects = [
     githubUrl: '',
     tags: ['Vue 3', 'Vue Router', 'CSS', 'Figma', 'GitHub', 'Netlify'],
     highlights: [
-      'Fluid layout on a 1920px base',
-      'Responsive nav using CSS variables and clamp()',
-      'Layered hero with blob, dashboard and Slack mock',
+      'Fluid layout',
+      'Responsive navigation',
       'Brand-purple hover states and a grayscale “trusted by” logo row',
     ],
     credit: {
