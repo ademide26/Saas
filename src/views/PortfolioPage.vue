@@ -194,6 +194,16 @@ onBeforeUnmount(() => {
 
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;700&display=swap');
+/* Edge-to-edge: applies only while the portfolio is on screen, so Wrangle and Pluck are untouched. */
+html:has(.portfolio), body:has(.portfolio), #app:has(.portfolio) {
+  margin: 0;
+  padding: 0;
+  max-width: none;
+  width: 100%;
+}
+body:has(.portfolio), #app:has(.portfolio) { display: block; }
+/* Matches the page background, so overscroll never flashes white. */
+body:has(.portfolio) { background: #0f1117; }
 </style>
 
 <style scoped>
@@ -205,11 +215,12 @@ onBeforeUnmount(() => {
   font-family: Inter, system-ui, sans-serif; line-height: 1.6;
 }
 .wrap { width: min(1120px, 100% - 2.5rem); margin-inline: auto; }
-section { padding-block: clamp(3rem, 7vw, 5.5rem); scroll-margin-top: 72px; }
+section { padding-block: clamp(2rem, 5vw, 3.5rem); scroll-margin-top: 72px; }
 h1, h2, h3, .logo { font-family: 'Space Grotesk', Inter, sans-serif; line-height: 1.15; margin: 0; }
 h1 { font-size: clamp(2.2rem, 5.2vw, 3.8rem); letter-spacing: -0.02em; margin: 1rem 0; }
 h2 { font-size: clamp(1.7rem, 3.6vw, 2.5rem); margin-bottom: 0.5rem; }
 h3 { font-size: 1.15rem; margin-bottom: 0.35rem; }
+.tl li:last-child { margin-bottom: 0; }
 p { margin: 0 0 1rem; max-width: 65ch; }
 .lead, .sub, .card p, .kind { color: var(--muted); }
 .lead { font-size: 1.1rem; }
