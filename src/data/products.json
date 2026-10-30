@@ -1,0 +1,141 @@
+[
+  {
+    "id": "panadol-pain-fever-500mg-x100",
+    "name": "Panadol Pain and Fever 500mg x100 Tablets",
+    "brand": "GSK",
+    "price": 5600,
+    "image": "/Images/Panadol.png",
+    "gallery": [
+      "/Images/panadol5x.png",
+      "/Images/panadolr.png",
+      "/Images/Panadol.png",
+      "/Images/panadoll.png"
+    ]
+  },
+  {
+    "id": "mb-paracetamol-syrup-60ml",
+    "name": "M&B Paracetamol Syrup - 60ml",
+    "brand": "M&B",
+    "price": 5600,
+    "image": "/Images/paracetamol syrup.png"
+  },
+  {
+    "id": "panadol-night",
+    "name": "Panadol Night",
+    "brand": "GSK",
+    "price": 5600,
+    "image": "/Images/panadol night.png"
+  },
+  {
+    "id": "panadol-pf",
+    "name": "Panadol PF",
+    "brand": "GSK",
+    "price": 5600,
+    "image": "/Images/panadol pf.png"
+  },
+  {
+    "id": "wellman-omega-369",
+    "name": "Wellman Plus Omega 3-6-9",
+    "brand": "WELLAN",
+    "price": 5600,
+    "image": "/Images/wellman.png"
+  },
+  {
+    "id": "emzor-paracetamol-500mg-x96",
+    "name": "Emzor Paracetamol 500mg Tablets *96",
+    "brand": "EMZOR",
+    "price": 5600,
+    "image": "/Images/emzor paracetamol.png"
+  },
+  {
+    "id": "kesartem-tablet",
+    "name": "Kesartem 80mg & 480mg Tablet",
+    "brand": "KESSINGTON",
+    "price": 5600,
+    "image": "/Images/Kesartem.png"
+  },
+  {
+    "id": "omron-flow-meter",
+    "name": "Omron PFM20 Peak Flow Meter",
+    "brand": "OMRON",
+    "price": 5600,
+    "image": "/Images/omronflow.png"
+  },
+  {
+    "id": "wellbaby-multivitamin",
+    "name": "Wellbaby Multi-vitamin Drops",
+    "brand": "VITABIOTICS",
+    "price": 5600,
+    "image": "/Images/wellbaby.png"
+  },
+  {
+    "id": "centrum-advance",
+    "name": "Centrum Advance Multivitamin",
+    "brand": "CENTRUM",
+    "price": 5600,
+    "image": "/Images/centrum.png"
+  },
+  {
+    "id": "emvite-multivitamin",
+    "name": "Emvite Multivitamin Syrup 100ml",
+    "brand": "EMZOR",
+    "price": 5600,
+    "image": "/Images/emvitesyrup.png"
+  },
+  {
+    "id": "emzor-omega3-fish-oil",
+    "name": "Emzor Omega-3 Fish Oil 1000mg",
+    "brand": "EMZOR",
+    "price": 5600,
+    "image": "/Images/omegafishoil.png"
+  },
+  {
+    "id": "wellman-50+-vitabiotics",
+    "name": "Wellman 50+ Vitabiotics",
+    "brand": "WELLMAN",
+    "price": 5600,
+    "image": "/Images/wellman50+.png"
+  },
+  {
+    "id": "strepsils-lozenges",
+    "name": "Strepsils Original Lozenges",
+    "brand": "STREPSILS",
+    "price": 5600,
+    "image": "/Images/Strepsils.png"
+  },
+  {
+    "id": "kesartem-malaria",
+    "name": "Kesartem 20mg & 120mg Tablet",
+    "brand": "KESSINGTON",
+    "price": 5600,
+    "image": "/Images/kesartem malaria.png"
+  },
+  {
+    "id": "kesflox-ofloxacin",
+    "name": "Kesflox 400mg Tablet",
+    "brand": "KESSINGTON",
+    "price": 5600,
+    "image": "/Images/kesflox.png"
+  },
+  {
+    "id": "kesproflox-ciprofloxacin",
+    "name": "Kesproflox 500mg Tablet",
+    "brand": "KESSINGTON",
+    "price": 5600,
+    "image": "/Images/kesproflox.png"
+  },
+  {
+    "id": "kessington-albendazole",
+    "name": "Kessington Albendazole 400mg Tablet",
+    "brand": "KESSINGTON",
+    "price": 5600,
+    "image": "/Images/albendazole.png"
+  },
+  {
+    "id": "kessington-ceftriaxone",
+    "name": "Kessington Ceftriaxone Injection 1gm",
+    "brand": "KESSINGTON",
+    "price": 5600,
+    "image": "/Images/ceftriaxone.png"
+  }
+]

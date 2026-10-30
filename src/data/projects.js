@@ -60,15 +60,18 @@ export const projects = [
   },
   // Template for a future project: copy it, fill it in, set published: true.
   {
-    published: false,
-    title: '[PROJECT NAME]',
-    kind: '[WHAT IT IS]',
-    blurb: '[ONE OR TWO SENTENCES]',
-    image: shot('project-name.png'),
+    published: true,
+    title: 'Remedial Health Website',
+    kind: 'Logic flow of HomePage to the Cart-Checkout',
+    blurb: 'My Vue Implementation of the Home-page, Cart, Cart-Checkout and Product-View pages done while interning at Remedial Health',
+    image: shot('RH-home.png'),
     live: '',
     githubUrl: '',
-    tags: [],
-    highlights: [],
+    tags: ['Vue 3', 'Vue Router', 'CSS', 'Figma', 'Javascript', 'GitHub', 'Netlify'],
+    highlights: [
+      'Page Responsiveness',
+      'Proper-alignment of cards',
+      'Smooth transition to next page'],
     credit: null, // set to the same shape as above if the design isn't yours
   },
 ]
