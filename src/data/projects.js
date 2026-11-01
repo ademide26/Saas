@@ -63,9 +63,9 @@ export const projects = [
     published: true,
     title: 'Remedial Health Website',
     kind: 'Logic flow of HomePage to the Cart-Checkout',
-    blurb: 'My Vue Implementation of the Home-page, Cart, Cart-Checkout and Product-View pages done while interning at Remedial Health',
+    blurb: 'My Vue Implementation of the Home-page, Cart, and Cart-Checkout pages done while interning at Remedial Health',
     image: shot('RH-home.png'),
-    live: '',
+    live: 'https://ademidev.netlify.app/Homepage',
     githubUrl: '',
     tags: ['Vue 3', 'Vue Router', 'CSS', 'Figma', 'Javascript', 'GitHub', 'Netlify'],
     highlights: [
