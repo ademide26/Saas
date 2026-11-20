@@ -1,0 +1,30 @@
+[
+    {
+        "id": "sunshine-vibes",
+        "name": "Sunshine Vibes",
+        "price": 14.99,
+        "details": "Bright yellow with a sun print, Soft cotton blend.",
+        "image": "/Images/sunshine vibes.png"
+    },
+    {
+        "id": "mini-boss-babe",
+        "name": "Mini Boss Babe",
+        "price": 15.99,
+        "details": "Sassy black tee with bold white text. For the confident ones",
+        "image": "/Images/mini boss babe.png"
+    },
+    {
+        "id": "adventure-explorer",
+        "name": "Adventure Explorer",
+        "price": 16.49,
+        "details": "Forest green tee with mountan graphic.",
+        "image": "/Images/adventure explorer.png"
+    },
+    {
+        "id": "floral-wonder",
+        "name": "Floral Wonder",
+        "price": 17.25,
+        "details": "All-over floral print with puff sleeves. Super cute!",
+        "image": "/Images/floral wonder.png"
+    }
+]
